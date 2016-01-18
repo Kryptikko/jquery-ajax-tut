@@ -3,7 +3,8 @@ $(document).ready(function(){
 		url: 'puppies.json',
 		dataType: 'json',
 		complete: function (data) {
-			notie.alert(1, 'PUPPIES!!', 1.5); //izkarva saobshtenie "puppies"
+			//mojesh da vidish samo w consolata na dev tools (F12 na chrome)
+			console.log('Puppies have been loaded!');
 			data.responseJSON.forEach(function(item){
 				var rendered = '<div class="image-grid-item">' +
 									'<header>' +
@@ -25,8 +26,8 @@ $(document).ready(function(){
 						if(!bark) {
 							bark = "Baw Baw";
 						}
-						//alertva usera che kuchenceto djavka
-						notie.alert(4, name + ' says: "' + bark + '"', 1.5);
+						// djaf djaf
+						console.log(name + ' says: "' + bark + '"')
 					});
 			});
 
